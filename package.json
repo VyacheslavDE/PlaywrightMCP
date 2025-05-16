@@ -1,0 +1,19 @@
+{
+  "name": "playwrightmcp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.52.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.52.0",
+    "allure-playwright": "^3.2.2"
+  }
+}

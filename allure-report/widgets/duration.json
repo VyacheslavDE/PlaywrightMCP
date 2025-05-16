@@ -1,0 +1,1 @@
+[{"uid":"c2937dc89c014ff5","name":"Validate Getting Started titles under Docs","time":{"start":1747395851392,"stop":1747395852665,"duration":1273},"status":"passed","severity":"normal"},{"uid":"77b2914fcbe22075","name":"Collect Getting Started titles from Playwright Docs","time":{"start":1747395848923,"stop":1747395850742,"duration":1819},"status":"passed","severity":"normal"}]

@@ -1,0 +1,3 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","1273","Validate Getting Started titles under Docs","","Fri May 16 14:44:11 EEST 2025","passed","Fri May 16 14:44:12 EEST 2025","","gettingStarted.spec.ts","",""
+"","1819","Collect Getting Started titles from Playwright Docs","","Fri May 16 14:44:08 EEST 2025","passed","Fri May 16 14:44:10 EEST 2025","","gettingStarted.spec.ts","",""
