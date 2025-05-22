@@ -1,0 +1,168 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playwright Test Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .summary {
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+        }
+        .summary-item {
+            display: flex;
+            flex-direction: column;
+        }
+        .summary-value {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .passed { color: #28a745; }
+        .failed { color: #dc3545; }
+        .skipped { color: #6c757d; }
+        .broken { color: #fd7e14; }
+        .unknown { color: #6c757d; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f8f9fa;
+            font-weight: bold;
+        }
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        .status-badge {
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: bold;
+            color: white;
+            display: inline-block;
+            min-width: 80px;
+            text-align: center;
+        }
+        .status-passed { background-color: #28a745; }
+        .status-failed { background-color: #dc3545; }
+        .status-skipped { background-color: #6c757d; }
+        .status-broken { background-color: #fd7e14; }
+        .status-unknown { background-color: #6c757d; }
+        .duration {
+            color: #666;
+            font-size: 0.9em;
+        }
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+            font-style: italic;
+        }
+        .timestamp {
+            text-align: right;
+            color: #6c757d;
+            font-size: 0.9em;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Playwright Test Report</h1>
+    
+    <div class="summary">
+        <div class="summary-item">
+            <div class="summary-value">4</div>
+            <div>Total Tests</div>
+        </div>
+        <div class="summary-item">
+            <div class="summary-value passed">4</div>
+            <div>Passed</div>
+        </div>
+        <div class="summary-item">
+            <div class="summary-value failed">0</div>
+            <div>Failed</div>
+        </div>
+        <div class="summary-item">
+            <div class="summary-value skipped">0</div>
+            <div>Skipped</div>
+        </div>
+        <div class="summary-item">
+            <div class="summary-value broken">0</div>
+            <div>Broken</div>
+        </div>
+    </div>
+    
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Test Name</th>
+                <th>Status</th>
+                <th>Duration</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>Validate Getting Started titles under Docs</td>
+                <td><span class="status-badge status-passed">PASSED</span></td>
+                <td class="duration">1.27s</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Collect Getting Started titles from Playwright Docs</td>
+                <td><span class="status-badge status-passed">PASSED</span></td>
+                <td class="duration">1.82s</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Collect Getting Started titles from Playwright Docs</td>
+                <td><span class="status-badge status-passed">PASSED</span></td>
+                <td class="duration">0.90s</td>
+                <td></td>
+            </tr>
+            
+            <tr>
+                <td>Validate Getting Started titles under Docs</td>
+                <td><span class="status-badge status-passed">PASSED</span></td>
+                <td class="duration">0.46s</td>
+                <td></td>
+            </tr>
+            
+        </tbody>
+    </table>
+    
+    
+    <div class="timestamp">
+        Generated on: 5/22/2025, 8:30:49 AM
+    </div>
+</body>
+</html>
+  
