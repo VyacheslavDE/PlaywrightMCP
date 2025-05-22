@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playwright MCP - Test Reports</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+        .report-container {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        .info {
+            background-color: #e7f3fe;
+            border-left: 6px solid #2196F3;
+            padding: 10px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Playwright MCP - Test Reports</h1>
+        
+        <div class="info">
+            <p>This page provides access to the latest test reports for the Playwright MCP project.</p>
+        </div>
+        
+        <div class="report-container">
+            <h2>Latest Test Report</h2>
+            <p>Click the button below to download the latest Allure report ZIP file:</p>
+            <a href="https://github.com/VyacheslavDE/PlaywrightMCP/actions" class="button">View GitHub Actions</a>
+            
+            <h3>Instructions for viewing the report:</h3>
+            <ol>
+                <li>Go to the latest successful workflow run</li>
+                <li>Download the "allure-report" artifact</li>
+                <li>Extract the ZIP file</li>
+                <li>Open the "index.html" file in your browser</li>
+            </ol>
+            
+            <h3>Running tests locally:</h3>
+            <p>To run tests and generate reports locally, use the following commands:</p>
+            <pre>
+# Run tests with Allure reporter
+npm run test:allure
+
+# Generate Allure report
+npm run allure:generate
+
+# Serve Allure report (requires Allure CLI)
+npm run allure:serve
+            </pre>
+        </div>
+    </div>
+</body>
+</html>
