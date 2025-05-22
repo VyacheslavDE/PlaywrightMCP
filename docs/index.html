@@ -57,28 +57,25 @@
         
         <div class="report-container">
             <h2>Latest Test Report</h2>
-            <p>Click the button below to download the latest Allure report ZIP file:</p>
-            <a href="https://github.com/VyacheslavDE/PlaywrightMCP/actions" class="button">View GitHub Actions</a>
+            <p>Click the button below to view the latest test report:</p>
+            <a href="./reports/index.html" class="button">View Test Report</a>
             
-            <h3>Instructions for viewing the report:</h3>
-            <ol>
-                <li>Go to the latest successful workflow run</li>
-                <li>Download the "allure-report" artifact</li>
-                <li>Extract the ZIP file</li>
-                <li>Open the "index.html" file in your browser</li>
-            </ol>
+            <h3>About this report:</h3>
+            <p>This is a simple HTML report generated from your Playwright test results. It provides a clean and straightforward view of your test outcomes without requiring any special plugins or Java dependencies.</p>
             
             <h3>Running tests locally:</h3>
             <p>To run tests and generate reports locally, use the following commands:</p>
             <pre>
-# Run tests with Allure reporter
-npm run test:allure
+# Run tests
+npm test
 
-# Generate Allure report
-npm run allure:generate
+# Generate HTML report
+node utils/generateSimpleReport.js
 
-# Serve Allure report (requires Allure CLI)
-npm run allure:serve
+# Open the report in your browser
+open reports/index.html  # On macOS
+# or
+start reports/index.html  # On Windows
             </pre>
         </div>
     </div>

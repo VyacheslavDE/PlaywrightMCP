@@ -30,26 +30,23 @@ jobs:
       - name: Install Playwright Browsers
         run: npx playwright install chromium --with-deps
 
-      - name: Install Allure commandline
-        run: npm install -g allure-commandline
-
       - name: Run Playwright tests
         run: npx playwright test
 
-      - name: Generate Allure report
-        run: |
-          allure generate ./allure-results --clean -o ./allure-report
-          touch ./allure-report/.nojekyll
-          cp index.html ./allure-report/
-          # Fix relative paths in Allure report
-          find ./allure-report -type f -name "*.html" -exec sed -i 's|href="/|href="./|g' {} \;
-          find ./allure-report -type f -name "*.html" -exec sed -i 's|src="/|src="./|g' {} \;
+      - name: Generate simple HTML report
+        run: node utils/generateSimpleReport.js
 
-      - name: Upload Allure report artifact
+      - name: Setup reports directory
+        run: |
+          mkdir -p ./docs
+          cp -r ./reports/* ./docs/
+          touch ./docs/.nojekyll
+
+      - name: Upload report artifact
         uses: actions/upload-artifact@v4
         with:
-          name: allure-report
-          path: ./allure-report
+          name: test-report
+          path: ./reports
 
   deploy:
     needs: test
@@ -63,11 +60,11 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Download Allure report artifact
+      - name: Download report artifact
         uses: actions/download-artifact@v4
         with:
-          name: allure-report
-          path: ./docs/allure-report
+          name: test-report
+          path: ./docs/reports
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
